@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio source code</title>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font:14px/1.5 ui-sans-serif,system-ui,sans-serif;background:#0e0f11;color:#e6e6e6}
+ header{padding:28px 24px 18px;border-bottom:1px solid #24262a}
+ h1{margin:0 0 6px;font-size:20px;font-weight:650;letter-spacing:-.01em}
+ .meta{color:#8b9096;font-size:12.5px}
+ .tabs{display:flex;flex-wrap:wrap;gap:6px;padding:14px 24px;border-bottom:1px solid #24262a;position:sticky;top:0;background:#0e0f11;z-index:2}
+ .tab{font:inherit;font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid #2c2f34;background:transparent;color:#a8adb4;cursor:pointer}
+ .tab:hover{color:#fff;border-color:#454a51}
+ .tab.on{background:#e6e6e6;color:#0e0f11;border-color:#e6e6e6}
+ .pane{display:none;padding:0 24px 60px}
+ .pane.on{display:block}
+ .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0 10px;color:#8b9096;font-size:12.5px}
+ .copy{font:inherit;font-size:12px;padding:5px 10px;border-radius:6px;border:1px solid #2c2f34;background:transparent;color:#a8adb4;cursor:pointer}
+ .copy:hover{color:#fff;border-color:#454a51}
+ pre{margin:0;padding:18px;background:#15171a;border:1px solid #24262a;border-radius:10px;overflow-x:auto;font:12.5px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d5dae0;tab-size:2}
+ a{color:#9ec1ff}a:hover{color:#c9dcff}
+</style></head><body>
+<header><h1>Brittany Lloy portfolio — source</h1>
+<div class="meta">8 files · 1,511 lines · 74 KB. Image assets in <code>work/</code> and <code>uploads/</code> are not included.</div></header>
+<div class="tabs"><button class="tab on" data-t="0">index.html</button><button class="tab" data-t="1">andgo.html</button><button class="tab" data-t="2">lingard.html</button><button class="tab" data-t="3">research.html</button><button class="tab" data-t="4">safespace.html</button><button class="tab" data-t="5">sasktel.html</button><button class="tab" data-t="6">styles.css</button><button class="tab" data-t="7">app.js</button></div>
+<div class="pane on" data-p="0"><div class="bar"><span>index.html · 219 lines</span><button class="copy" data-i="0">Copy</button></div><pre id="c0">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Brittany Lloy — Multi-disciplinary Designer&lt;/title&gt;
+&lt;meta name="description" content="Brittany Lloy — multi-disciplinary product designer based in Saskatoon."&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="#work" data-nav&gt;Work&lt;/a&gt;
+      &lt;a href="#about" data-nav&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="hero" id="hero"&gt;
+    &lt;svg class="starburst" viewBox="0 0 327.5 304.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;
+      &lt;path fill="#dedcd6" d="M215.04,300.45h-104.59l35.2-118.39-85.36,89.44L8,181.67l119.69-28.94L8,123.79,60.29,33.94l.46.48,84.03,87.22L110.46,5h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39ZM111.8,299.45h101.91l-35.41-119.09.84-.49,85.88,89.98,50.95-87.54-120.4-29.11v-.97l120.4-29.11-50.95-87.54-84.99,88.21-.84-.49L213.71,6h-101.91l34.52,117.32-.84.49L60.49,35.59,9.54,123.13l120.4,29.11v.97l-120.4,29.11,50.95,87.54,85.88-89.98.84.49-35.41,119.09Z"/&gt;
+    &lt;/svg&gt;
+    &lt;div class="hero-skills" aria-hidden="true"&gt;&lt;div class="hero-skills-track" style="align-items:flex-start;"&gt;&lt;span&gt;Product Designer&lt;/span&gt;&lt;span&gt;User Researcher&lt;/span&gt;&lt;span&gt;Design Systems Builder&lt;/span&gt;&lt;span&gt;Brand Designer&lt;/span&gt;&lt;span&gt;Design Leader&lt;/span&gt;&lt;span&gt;Mobile App Designer&lt;/span&gt;&lt;span&gt;Mentor&lt;/span&gt;&lt;span&gt;Prototyper&lt;/span&gt;&lt;span&gt;Information Architect&lt;/span&gt;&lt;span&gt;Design Thinker&lt;/span&gt;&lt;span&gt;Maker&lt;/span&gt;&lt;span&gt;Product Designer&lt;/span&gt;&lt;span&gt;User Researcher&lt;/span&gt;&lt;span&gt;Design Systems Builder&lt;/span&gt;&lt;span&gt;Brand Designer&lt;/span&gt;&lt;span&gt;Design Leader&lt;/span&gt;&lt;span&gt;Mobile App Designer&lt;/span&gt;&lt;span&gt;Mentor&lt;/span&gt;&lt;span&gt;Prototyper&lt;/span&gt;&lt;span&gt;Information Architect&lt;/span&gt;&lt;span&gt;Design Thinker&lt;/span&gt;&lt;span&gt;Maker&lt;/span&gt;&lt;span&gt;Product Designer&lt;/span&gt;&lt;span&gt;User Researcher&lt;/span&gt;&lt;span&gt;Design Systems Builder&lt;/span&gt;&lt;span&gt;Brand Designer&lt;/span&gt;&lt;span&gt;Design Leader&lt;/span&gt;&lt;span&gt;Mobile App Designer&lt;/span&gt;&lt;span&gt;Mentor&lt;/span&gt;&lt;span&gt;Prototyper&lt;/span&gt;&lt;span&gt;Information Architect&lt;/span&gt;&lt;span&gt;Design Thinker&lt;/span&gt;&lt;span&gt;Maker&lt;/span&gt;&lt;span&gt;Product Designer&lt;/span&gt;&lt;span&gt;User Researcher&lt;/span&gt;&lt;span&gt;Design Systems Builder&lt;/span&gt;&lt;span&gt;Brand Designer&lt;/span&gt;&lt;span&gt;Design Leader&lt;/span&gt;&lt;span&gt;Mobile App Designer&lt;/span&gt;&lt;span&gt;Mentor&lt;/span&gt;&lt;span&gt;Prototyper&lt;/span&gt;&lt;span&gt;Information Architect&lt;/span&gt;&lt;span&gt;Design Thinker&lt;/span&gt;&lt;span&gt;Maker&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="wrap hero-inner"&gt;
+      &lt;h1 class="display" style="letter-spacing:-3px; font-size:clamp(30px, 4.6vw, 85px); line-height:1.06; max-width:min(693px, 58vw);"&gt;&lt;span style="white-space:nowrap;"&gt;Hey,&lt;/span&gt;&lt;br&gt;&lt;span style="white-space:nowrap;"&gt;nice to meetcha,&lt;/span&gt;&lt;br&gt;&lt;span style="white-space:nowrap;"&gt;I'm Brittany Lloy.&lt;/span&gt;&lt;/h1&gt;
+      &lt;div class="hero-contact"&gt;
+        &lt;a href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · &lt;a href="tel:3062417533"&gt;306.241.7533&lt;/a&gt; · Saskatoon, SK
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="rule-top section-pad" id="work"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="reveal"&gt;
+        &lt;div class="kicker"&gt;Featured Work&lt;/div&gt;
+        &lt;h2 class="section-title"&gt;A few goodies to dive into.&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class="work-grid"&gt;
+        &lt;a class="work-card reveal featured" href="andgo.html"&gt;
+          &lt;div class="work-thumb"&gt;&lt;video src="work/andgo-thumb.mp4" autoplay loop muted playsinline aria-label="Andgo Shift Sight — project visual"&gt;&lt;/video&gt;&lt;/div&gt;
+          &lt;div class="work-meta"&gt;
+            &lt;span class="work-title"&gt;Andgo Shift Sight&lt;small&gt;Data analytics dashboard&lt;/small&gt;&lt;/span&gt;
+            &lt;span class="work-view"&gt;View →&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="work-tags"&gt;Workshop facilitation · Prototyping · UX/UI&lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class="work-card reveal" href="research.html"&gt;
+          &lt;div class="work-thumb"&gt;&lt;img src="work/research-journey-map-v2.png" alt="Andgo User Research — project visual"&gt;&lt;/div&gt;
+          &lt;div class="work-meta"&gt;
+            &lt;span class="work-title"&gt;Andgo User Research&lt;small&gt;Research operations&lt;/small&gt;&lt;/span&gt;
+            &lt;span class="work-view"&gt;View →&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="work-tags"&gt;Interviews · Synthesis · Usability testing&lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class="work-card reveal" href="sasktel.html"&gt;
+          &lt;div class="work-thumb thumb-contain"&gt;&lt;img src="work/sasktel-thumb.png" alt="mySASKTEL Consumer Evolution — project visual"&gt;&lt;/div&gt;
+          &lt;div class="work-meta"&gt;
+            &lt;span class="work-title"&gt;mySASKTEL Consumer Evolution&lt;small&gt;Consumer portal redesign&lt;/small&gt;&lt;/span&gt;
+            &lt;span class="work-view"&gt;View →&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="work-tags"&gt;Prototyping · Interaction · User testing&lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class="work-card reveal" href="safespace.html"&gt;
+          &lt;div class="work-thumb"&gt;&lt;img src="work/safespace-thumb.png" alt="Google Design Sprint: Safespace — project visual"&gt;&lt;/div&gt;
+          &lt;div class="work-meta"&gt;
+            &lt;span class="work-title"&gt;Google Design Sprint: Safespace&lt;small&gt;Three-day sprint at Google SF&lt;/small&gt;&lt;/span&gt;
+            &lt;span class="work-view"&gt;View →&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="work-tags"&gt;Brand · Prototyping · UX/UI&lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class="work-card reveal" href="lingard.html"&gt;
+          &lt;div class="work-thumb"&gt;&lt;img src="work/lingard-thumb.png" alt="Lingard + Dreger Brand &amp; Website — project visual"&gt;&lt;/div&gt;
+          &lt;div class="work-meta"&gt;
+            &lt;span class="work-title"&gt;Lingard + Dreger Brand &amp; Website&lt;small&gt;Rebrand &amp; website&lt;/small&gt;&lt;/span&gt;
+            &lt;span class="work-view"&gt;View →&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="work-tags"&gt;Brand sprint · Brand · Website&lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="brand-rule"&gt;&lt;/div&gt;
+
+    &lt;div class="wrap"&gt;
+      &lt;div class="brands reveal"&gt;
+        &lt;div class="kicker"&gt;Additional Brand Work&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="brand-marquee reveal"&gt;
+          &lt;div class="brand-track"&gt;
+            &lt;img src="work/brand-cdc.png" alt="Crop Development Centre"&gt;
+            &lt;img src="work/brand-florajames.png" alt="Flora James Shop"&gt;
+            &lt;img src="work/brand-momskids.png" alt="Moms + Kids Health Saskatchewan"&gt;
+            &lt;img src="work/brand-pathways.png" alt="Pathways on Ave T"&gt;
+            &lt;img src="work/brand-tilt.png" alt="Tilt Media"&gt;
+            &lt;img src="work/brand-cdc.png" alt="" aria-hidden="true"&gt;
+            &lt;img src="work/brand-florajames.png" alt="" aria-hidden="true"&gt;
+            &lt;img src="work/brand-momskids.png" alt="" aria-hidden="true"&gt;
+            &lt;img src="work/brand-pathways.png" alt="" aria-hidden="true"&gt;
+            &lt;img src="work/brand-tilt.png" alt="" aria-hidden="true"&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="rule-top section-pad" id="about"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="reveal"&gt;
+        &lt;div class="kicker"&gt;Resume&lt;/div&gt;
+        &lt;h2 class="section-title" style="font-size:50px;"&gt;Here's a bit about me.&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class="about-grid"&gt;
+        &lt;div class="about-bio reveal"&gt;
+          &lt;p&gt;I'm a designer currently based in Saskatoon with over a decade of experience turning ambiguous problems into products and experiences people actually enjoy using. My path started in branding and digital transformation work, and a deep interest in psychology drew me naturally into experience design, where I've since built a strong understanding of B2B software and the real impact great problem solving can have.&lt;/p&gt;
+          &lt;p&gt;Over the years I've worked on teams of all sizes, including being a team of one, a team of many, and currently leading a design team. I have built design systems, research programs, and processes from the ground up, and influencing product strategy at the leadership level.&lt;/p&gt;
+          &lt;p&gt;My interest in leadership extends beyond the workplace too, as a board member for Saskatoon Makerspace, I help guide the strategic direction of a non-profit community workshop, keeping creative programs and tools accessible to makers here locally.&lt;/p&gt;
+          &lt;p&gt;I'm endlessly curious about the psychology behind why design works, and that curiosity shows up in everything from how I run a workshop to how I mentor the designers around me. When I'm not designing, I'm chasing conferences, courses, side projects, or a hands on creative hobby, anything that flexes a different part of my design brain.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="reveal"&gt;
+          &lt;div class="col-label"&gt;Experience&lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Senior Lead Product Designer,&lt;br&gt;Andgo Systems &lt;span class="when"&gt;· 2022 – Current&lt;/span&gt;&lt;/div&gt;
+            &lt;p&gt;I lead Andgo's design team, balancing hands-on design work with team leadership across the entire product life cycle, from strategy, research and ideation to prototyping and post-launch iteration. During my time, I have built our design system from scratch, led the design of new modules from zero, and established our user research program and introduced several processes and frameworks such as JTBD. I collaborate with Product Managers and work closely with Engineering and CX teams to ensure our goals are met.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Designer, zu &lt;span class="when"&gt;· 2014 – 2022&lt;/span&gt;&lt;/div&gt;
+            &lt;p&gt;Worked on a wide variety of creative initiatives, from branding to large-scale digital transformation projects and everything in between, facilitating design thinking workshops, running user research, and collaborating closely with strategists, developers, and the accounts team.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Principal Freelance Designer,&lt;br&gt;Blloy Design &lt;span class="when"&gt;· 2013 – Present&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Lead Designer, Yastech &lt;span class="when"&gt;· 2013 – 2014&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Graphic Designer, Fine Lifestyles Magazine &lt;span class="when"&gt;· 2013&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="reveal"&gt;
+          &lt;div class="col-label"&gt;Education&lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Design Leadership Certification &lt;span class="when"&gt;· 2024&lt;/span&gt;&lt;/div&gt;
+            &lt;span class="org"&gt;Brainstation&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;UX Certification &lt;span class="when"&gt;· 2019&lt;/span&gt;&lt;/div&gt;
+            &lt;span class="org"&gt;Nielsen Norman Group&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Human Centred Design 101 &lt;span class="when"&gt;· 2016&lt;/span&gt;&lt;/div&gt;
+            &lt;span class="org"&gt;IDEO &amp;amp; +Acumen&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Graphic Design Diploma &lt;span class="when"&gt;· 2013&lt;/span&gt;&lt;/div&gt;
+            &lt;span class="org"&gt;Nova Scotia Community College&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Applied Communication Arts Certificate &lt;span class="when"&gt;· 2011&lt;/span&gt;&lt;/div&gt;
+            &lt;span class="org"&gt;Nova Scotia Community College&lt;/span&gt;
+          &lt;/div&gt;
+
+          &lt;div class="col-label" style="margin-top:44px;"&gt;Volunteer work&lt;/div&gt;
+          &lt;div class="entry"&gt;
+            &lt;div class="role"&gt;Board Member,&lt;br&gt;Saskatoon Makerspace &lt;span class="when"&gt;· 2024 – Present&lt;/span&gt;&lt;/div&gt;
+            &lt;p&gt;Supporting the governance and strategic direction of a non-profit community workshop in Riversdale, helping keep its tools, classes, and memberships accessible to makers across Saskatoon.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  (function(){
+    var header = document.querySelector('header.top');
+    var hero = document.getElementById('hero');
+    if (!header || !hero) return;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ header.classList.toggle('scrolled', !e.isIntersecting); });
+      }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' }).observe(hero);
+      return;
+    }
+    function update(){
+      var h = hero.offsetHeight || window.innerHeight;
+      header.classList.toggle('scrolled', window.scrollY &gt; h - 80);
+    }
+    window.addEventListener('load', update);
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+  })();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="1"><div class="bar"><span>andgo.html · 132 lines</span><button class="copy" data-i="1">Copy</button></div><pre id="c1">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Andgo Systems Customer Data Tool — Brittany Lloy&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top scrolled"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="index.html#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="index.html#work" class="active"&gt;Work&lt;/a&gt;
+      &lt;a href="index.html#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="case-hero"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a class="back" href="index.html#work"&gt;← All work&lt;/a&gt;
+      &lt;div class="case-role"&gt;Lead Designer&lt;/div&gt;
+      &lt;h1 class="case-h1"&gt;Andgo Sight Sight Data Tool&lt;/h1&gt;
+      &lt;div class="case-tags"&gt;&lt;span&gt;Workshop facilitation&lt;/span&gt;&lt;span&gt;Prototyping&lt;/span&gt;&lt;span&gt;Interaction design&lt;/span&gt;&lt;span&gt;UX/UI design&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="case-figure"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-visual reveal in"&gt;
+        &lt;video src="work/andgo-dashboard-v2.mp4" autoplay loop muted playsinline aria-label="Andgo Systems Customer Data Tool — dashboard interaction"&gt;&lt;/video&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Overview&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;After years of manual reporting, Andgo recognized the need to empower customers to access their own data and metrics for internal reporting. Customers trusted that Andgo's core product the automation behind scenes worked, but they had no way to see it working. When a Site Admin wanted to know their fill rate last quarter, the honest answer was to ask Customer Success for a report, or export data and rebuild the picture by hand in a spreadsheet.&lt;/p&gt;
+          &lt;p&gt;We knew building a customer data dashboard from the ground up would be what was best for them: a self-serve product, later named Shift Sight, that would let customers quickly gauge the ROI of Andgo, view a comprehensive overview of usage and adoption, and access the key metrics essential for reporting to senior leadership.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Process&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;My approach began with direct customer consultations to understand their objectives, followed by an internal design-thinking workshop that I led with a product manager. That early listening surfaced two key personas: the Systems Analyst, who wanted reporting on demand and never wanted to be in the position of reporting numbers after the fact, and the Reporter a less technical but far higher frequency user who wanted to check the numbers themselves and share insights upward without a translation step.&lt;/p&gt;
+          &lt;p&gt;After research, I studied the competitive landscape, built wireframes, validated concepts with customers, and moved into prototyping. During Early Access, I ran a lightweight diary study with engaged customers, logging real tasks and friction over time, paired with structured feedback sessions. To force the resulting tradeoffs into the open, I ran a joint scoring session with the full cross-functional team, scoring impact effort estimates against engineering's technical confidence and product's customer impact research.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="dash-row"&gt;
+        &lt;div class="dash-shot"&gt;
+          &lt;img src="work/research-dash1.png" alt="Submissions and shifts dashboard wireframe"&gt;
+          &lt;img class="alt" src="work/andgo-final1.png" alt="Shift Sight dashboard, final design"&gt;
+        &lt;/div&gt;
+        &lt;div class="dash-shot"&gt;
+          &lt;img src="work/research-dash2.png" alt="Total processing time detail wireframe"&gt;
+          &lt;img class="alt" src="work/andgo-final2.png" alt="Total shift offers detail, final design"&gt;
+        &lt;/div&gt;
+        &lt;div class="dash-shot"&gt;
+          &lt;img src="work/research-dash3.png" alt="Filter modal wireframe"&gt;
+          &lt;img class="alt" src="work/andgo-final3.png" alt="Date range modal, final design"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Outcome&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;As engineering began building, I took an early preview to a customer onsite visit to demo and gather feedback, the response was overwhelmingly positive, reinforcing our strategy and direction. Shift Sight shipped to General Availability on January 20, 2026, to roughly three dozen customers, converting a validated Preview into the default experience. It earned a Customer Effort Score of 4.4 out of 5 across it’s lifetime.&lt;/p&gt;
+          &lt;div class="metrics"&gt;
+            &lt;div class="metric"&gt;
+              &lt;span class="metric-num"&gt;4.4&lt;span class="metric-unit"&gt;/5&lt;/span&gt;&lt;/span&gt;
+              &lt;span class="metric-label"&gt;Customer Effort Score&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="metric"&gt;
+              &lt;span class="metric-num"&gt;100&lt;span class="metric-unit"&gt;%&lt;/span&gt;&lt;/span&gt;
+              &lt;span class="metric-label"&gt;Retention rate&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class="case-next"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a href="lingard.html"&gt;← Lingard + Dreger Brand &amp; Website&lt;/a&gt;
+      &lt;a href="research.html"&gt;Andgo User Research →&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script&gt;
+(function(){
+  document.querySelectorAll('.dash-shot').forEach(function(shot, i){
+    var alt = shot.querySelector('.alt');
+    if(!alt) return;
+    var on = false;
+    function tick(){
+      on = !on;
+      alt.style.opacity = on ? '1' : '0';
+      setTimeout(tick, 3500 + Math.random() * 4500);
+    }
+    setTimeout(tick, 1200 + i * 900 + Math.random() * 2000);
+  });
+})();
+&lt;/script&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="2"><div class="bar"><span>lingard.html · 131 lines</span><button class="copy" data-i="2">Copy</button></div><pre id="c2">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Lingard + Dreger Brand &amp; Website — Brittany Lloy&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top scrolled"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="index.html#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="index.html#work" class="active"&gt;Work&lt;/a&gt;
+      &lt;a href="index.html#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="case-hero"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a class="back" href="index.html#work"&gt;← All work&lt;/a&gt;
+      &lt;div class="case-role"&gt;Lead Designer&lt;/div&gt;
+      &lt;h1 class="case-h1"&gt;Lingard + Dreger Brand &amp; Website&lt;/h1&gt;
+      &lt;div class="case-tags"&gt;&lt;span&gt;Brand sprint&lt;/span&gt;&lt;span&gt;Brand&lt;/span&gt;&lt;span&gt;Marketing collateral&lt;/span&gt;&lt;span&gt;Website&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="case-figure"&gt;
+    &lt;div class="photo-band full-colour" data-parallax&gt;
+      &lt;div class="photo-band-bg" style="background-image:url('work/ld-signage-banner.png');"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Overview&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;Formerly Twigg &amp;amp; Co., this accounting firm had roots in Saskatoon since the '70s and was going through a transitional period — introducing two new partners, moving to a new building on Broadway, and looking to attract new talent and clients. It was the perfect time for a rename and rebrand.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="band-pair reveal"&gt;
+        &lt;div class="photo-band" data-parallax&gt;
+          &lt;div class="photo-band-bg" style="background-image:url('work/ld-sketches.png');"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="parallax-band" data-parallax&gt;
+          &lt;div class="parallax-bg"&gt;&lt;/div&gt;
+          &lt;img class="parallax-logo" src="work/ld-banner-logo-v2.png" alt="Lingard + Dreger logo lockup"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Process&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;Rather than starting with logo concepts, I led the partners through a brand sprint — working sessions to align on mission, vision, values, and personality before any design began. For a partnership finding its footing, this did as much strategic work as creative. The name, mark, and website that followed were grounded in real consensus, not one person's taste.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="fig-scroll reveal"&gt;
+        &lt;div class="fig-scroll-track"&gt;
+          &lt;figure class="fig"&gt;
+            &lt;img src="work/ld-guidelines-logo.png" alt="Brand guidelines spread showing logo spacing and minimum size"&gt;
+          &lt;/figure&gt;
+          &lt;figure class="fig"&gt;
+            &lt;img src="work/ld-guidelines-type.png" alt="Brand guidelines spread showing typography"&gt;
+          &lt;/figure&gt;
+          &lt;figure class="fig"&gt;
+            &lt;img src="work/ld-guidelines-values.png" alt="Brand guidelines spread showing values and audiences"&gt;
+          &lt;/figure&gt;
+          &lt;figure class="fig"&gt;
+            &lt;img src="work/ld-guidelines-voice.png" alt="Brand guidelines spread showing voice and personality"&gt;
+          &lt;/figure&gt;
+          &lt;figure class="fig"&gt;
+            &lt;img src="work/ld-guidelines-colour.png" alt="Brand guidelines spread showing the colour palette"&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Solution&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;For the visual identity, I drew on Saskatoon itself, the sweep of the Broadway Bridge and the curve of the South Saskatchewan River, both visible from the firm's new building, this lent itself perfectly to the space of a "L" and "D" when placed on their sides. I carried it through a full guidelines document (logo usage, colour, type, voice) so the partners had a system to grow with.&lt;/p&gt;
+          &lt;p&gt;The website was the brand's first real-world proof point where a prospective client or hire would decide whether the firm matched its new, confident story. I led the UX and visual design, shaping a site that spoke to both audiences at once, clients evaluating trust, candidates evaluating a career.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="build-row reveal"&gt;
+        &lt;div class="build-col"&gt;
+          &lt;img class="build-1" src="work/ld-build-1.png" alt="Location: South Sask. River plus Broadway Bridge"&gt;
+          &lt;img class="build-2" src="work/ld-build-2.png" alt="Partners: Lingard plus Dreger"&gt;
+        &lt;/div&gt;
+        &lt;div class="build-divider"&gt;&lt;/div&gt;
+        &lt;div class="build-mask"&gt;
+          &lt;img class="build-3" src="work/ld-build-3.png" alt="The resulting Lingard + Dreger logomark"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class="case-next"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a href="safespace.html"&gt;← Google Design Sprint: Safespace&lt;/a&gt;
+      &lt;a href="andgo.html"&gt;Andgo Shift Sight →&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="3"><div class="bar"><span>research.html · 138 lines</span><button class="copy" data-i="3">Copy</button></div><pre id="c3">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Lingard + Dreger Brand &amp; Website — Brittany Lloy&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top scrolled"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="index.html#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="index.html#work" class="active"&gt;Work&lt;/a&gt;
+      &lt;a href="index.html#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="case-hero"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a class="back" href="index.html#work"&gt;← All work&lt;/a&gt;
+      &lt;div class="case-role"&gt;Lead Designer&lt;/div&gt;
+      &lt;h1 class="case-h1"&gt;Andgo User Research&lt;/h1&gt;
+      &lt;div class="case-tags"&gt;&lt;span&gt;Interviews&lt;/span&gt;&lt;span&gt;Synthesis&lt;/span&gt;&lt;span&gt;Usability testing&lt;/span&gt;&lt;span&gt;Research ops&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="case-figure"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-visual reveal in"&gt;
+        &lt;img src="work/research-journey-map-v2.png" alt="Journey map for the Danielle Department Lead persona"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Overview&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;When I joined Andgo, product decisions relied almost entirely on sales input, with no formal user research and no defined personas in place. Without a clear understanding of who we were building for, the team defaulted to self-referential design, which resulted in a clunky experience for customers. My first initiative was to lead Andgo's first user research effort and develop personas the team could reference to support faster, better-informed product decisions.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Process&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;I partnered with the Customer Experience team to identify and reach interview candidates, sourcing deliberately across a range of customer sizes and locations to ensure the patterns I found were representative rather than anecdotal. I conducted approximately 20 one-on-one interviews, roughly three to four per profile, to understand users' day-to-day workflows and where Andgo was succeeding or falling short.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="persona-explorer"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid"&gt;
+        &lt;div class="col-label" aria-hidden="true"&gt;&lt;/div&gt;
+        &lt;div class="persona-explorer-grid"&gt;
+        &lt;div class="persona-picks" id="personaPicks"&gt;
+          &lt;button class="persona-pick active" type="button" data-persona="1" aria-label="Nora Newbie"&gt;&lt;img src="work/persona-thumb1.png" alt="Nora Newbie"&gt;&lt;/button&gt;
+          &lt;button class="persona-pick" type="button" data-persona="2" aria-label="Harry Housekeeping"&gt;&lt;img src="work/persona-thumb2.png" alt="Harry Housekeeping"&gt;&lt;/button&gt;
+          &lt;button class="persona-pick" type="button" data-persona="3" aria-label="Stella Scheduler"&gt;&lt;img src="work/persona-thumb3.png" alt="Stella Scheduler"&gt;&lt;/button&gt;
+          &lt;button class="persona-pick" type="button" data-persona="4" aria-label="Matty Manager"&gt;&lt;img src="work/persona-thumb4.png" alt="Matty Manager"&gt;&lt;/button&gt;
+          &lt;button class="persona-pick" type="button" data-persona="5" aria-label="Sienna CNO"&gt;&lt;img src="work/persona-thumb5.png" alt="Sienna CNO"&gt;&lt;/button&gt;
+          &lt;button class="persona-pick" type="button" data-persona="6" aria-label="Saad Systems Analyst"&gt;&lt;img src="work/persona-thumb6.png" alt="Saad Systems Analyst"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="persona-view"&gt;
+          &lt;img id="personaView" src="work/persona1.png" alt="Nora Newbie persona" style="max-width:495px"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Solution&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;The interviews resulted in six personas, each defined by profile type. After validating the personas, I presented them to leadership and then to the wider company, giving the team a shared, evidence-based reference for product decisions in place of assumptions.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Outcome&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;The response to the personas was strong enough that user research became a standing practice at Andgo, which led me to establish a formal research program, Andgo Research Labs. Aside from now having a guiding voice from users, two major changes followed immediately from the findings, a shift toward mobile-responsive design to support managers working on the go, and a revision of in-product content to reduce technical and medical jargon, making key actions easier for newer nurses to understand.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class="case-next"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a href="andgo.html"&gt;← Andgo Shift Sight&lt;/a&gt;
+      &lt;a href="sasktel.html"&gt;mySASKTEL Consumer Evolution →&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  (function(){
+    var view = document.getElementById('personaView');
+    var picks = document.querySelectorAll('#personaPicks .persona-pick');
+    picks.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        picks.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var src = 'work/persona' + btn.dataset.persona + '.png';
+        view.src = src;
+        view.alt = btn.querySelector('img').alt + ' persona';
+      });
+    });
+  })();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="4"><div class="bar"><span>safespace.html · 112 lines</span><button class="copy" data-i="4">Copy</button></div><pre id="c4">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Google Design Sprint: Safespace — Brittany Lloy&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top scrolled"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="index.html#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="index.html#work" class="active"&gt;Work&lt;/a&gt;
+      &lt;a href="index.html#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="case-hero"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a class="back" href="index.html#work"&gt;← All work&lt;/a&gt;
+      &lt;div class="case-role"&gt;Collaborative Designer&lt;/div&gt;
+      &lt;h1 class="case-h1"&gt;Google Design Sprint: Safespace&lt;/h1&gt;
+      &lt;div class="case-tags"&gt;&lt;span&gt;Brand&lt;/span&gt;&lt;span&gt;Prototyping&lt;/span&gt;&lt;span&gt;Interaction design&lt;/span&gt;&lt;span&gt;UX/UI design&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="case-figure"&gt;
+    &lt;div class="case-hero-band"&gt;
+      &lt;img src="work/safespace-logo.png" alt="Safespace logo"&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Overview&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;While attending a conference in 2017, I connected with a Sprint Master at Google, who invited me to their San Francisco office to take part in a three-day sprint alongside a mix of roughly 25 designers and developers. My group was given the broad challenge of creating a new, innovative health app — and while researching, we found a big gap in support for survivors of sexual trauma. We naturally felt this subject was worthy of focusing on.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="photo-row reveal"&gt;
+        &lt;img src="work/safespace-workshop.png" alt="Sprint team clustering How-Might-We notes on a whiteboard"&gt;
+        &lt;img src="work/safespace-sketch.png" alt="Hand-drawn screen flow sketches from the sprint"&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Process&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;Over three tiring but rewarding days of research, collaboration, and design, we created Safespace: an app giving survivors a place to safely and anonymously find community and support. Users can journal and track daily emotions, share their experiences in daily blogs, and connect with people who've been through something similar — without fear of judgment. We also experimented with an in-app trigger warnings that would overlap into other apps like Google Chrome.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="screen-row reveal"&gt;
+        &lt;div class="screen-track"&gt;
+        &lt;img src="work/safespace-day1.png" alt="Safespace app — Day 1 journal screen"&gt;
+        &lt;img src="work/safespace-day2.png" alt="Safespace app — Day 2 journal screen"&gt;
+        &lt;img src="work/safespace-day3.png" alt="Safespace app — Day 3 journal screen"&gt;
+        &lt;img src="work/safespace-feeling.png" alt="Safespace app — daily mood check-in"&gt;
+        &lt;img src="work/safespace-journal.png" alt="Safespace app — journal entry screen"&gt;
+        &lt;img src="work/safespace-trigger1.png" alt="Safespace app — in-browser trigger warning"&gt;
+        &lt;img src="work/safespace-trigger2.png" alt="Safespace app — community responses to a flagged article"&gt;
+        &lt;img src="work/safespace-day1.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-day2.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-day3.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-feeling.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-journal.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-trigger1.png" alt="" aria-hidden="true"&gt;
+        &lt;img src="work/safespace-trigger2.png" alt="" aria-hidden="true"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Outcome&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;At the end of our three day design sprint we presented our prototypes to a panel of Google Venture representatives for critique and questioning. Overall the panel was very impressed and had a very positive sentiment. This short and sweet adventure was an excellent exercise in practicing rapid prototyping and also sharpened my android app design skills.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class="case-next"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a href="sasktel.html"&gt;← mySASKTEL Consumer Evolution&lt;/a&gt;
+      &lt;a href="lingard.html"&gt;Lingard + Dreger Brand &amp; Website →&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="5"><div class="bar"><span>sasktel.html · 146 lines</span><button class="copy" data-i="5">Copy</button></div><pre id="c5">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;mySASKTEL Consumer Evolution — Brittany Lloy&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header class="top scrolled"&gt;
+  &lt;div class="top-inner"&gt;
+    &lt;a class="brand" href="index.html#top"&gt;&lt;svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/&gt;&lt;/svg&gt;&lt;span class="brand-name"&gt;Brittany Lloy&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="primary"&gt;
+      &lt;a href="index.html#work" class="active"&gt;Work&lt;/a&gt;
+      &lt;a href="index.html#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main id="top"&gt;
+
+  &lt;section class="case-hero"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a class="back" href="index.html#work"&gt;← All work&lt;/a&gt;
+      &lt;div class="case-role"&gt;Lead Designer&lt;/div&gt;
+      &lt;h1 class="case-h1"&gt;mySASKTEL Consumer Evolution&lt;/h1&gt;
+      &lt;div class="case-tags"&gt;&lt;span&gt;Prototyping&lt;/span&gt;&lt;span&gt;Interaction design&lt;/span&gt;&lt;span&gt;UX/UI design&lt;/span&gt;&lt;span&gt;User testing&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="case-figure"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-visual reveal in"&gt;
+        &lt;video src="work/andgo-databyday.mp4" autoplay loop muted playsinline aria-label="mySASKTEL Consumer Evolution — project visual"&gt;&lt;/video&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section-pad"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Overview&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;SaskTel is the leading Information and Communications Technology provider in Saskatchewan, with almost $1.4 billion in annual revenue and over 1.3 million customer connections. When they approached us to reimagine mySASKTEL, their consumer portal, the stakes were high: the existing experience was falling short both visually and structurally, and a growing list of business requirements, new functionality, alignment with a brand-new consumer design system, and a clean split between the consumer and business portals — meant this wasn't a redesign so much as a rebuild of the entire consumer experience across web.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Process&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;Over several months embedded full-time with SaskTel's internal team, we ran a research-driven design process with multiple rounds of user interviews and usability testing shaped every decision, from information architecture down to interaction details. The result was an intuitive, accessible, and visually refined system built to scale, one that unified the experience across platforms while giving SaskTel the flexibility to grow the portal independently from its business-facing counterpart.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label" aria-hidden="true"&gt;&lt;/div&gt;
+        &lt;div class="desk-frame vp-desktop vp-fit"&gt;
+        &lt;div class="vp-chrome"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="vp-screen" data-vp-screen&gt;
+          &lt;img src="uploads/Artboard%201.png" alt="mySASKTEL loading screen"&gt;
+          &lt;img src="uploads/Artboard%202-6f15b98b.png" alt="mySASKTEL account landing page"&gt;
+          &lt;img src="uploads/Artboard%204-6076ea7c.png" alt="Device and plan details"&gt;
+          &lt;img src="uploads/Artboard%205-3fd6b175.png" alt="Data usage notifications and billing"&gt;
+          &lt;img src="uploads/Artboard%206.png" alt="Data limit by device"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="case-copy-grid reveal"&gt;
+        &lt;div class="col-label"&gt;Outcome&lt;/div&gt;
+        &lt;div class="case-text"&gt;
+          &lt;p&gt;The redesign landed strongly in beta, earning enthusiastic feedback from users and validating the new direction end to end. It's since become the foundation for an ongoing roadmap of updates heading toward full launch, proof that the new system isn't just a visual refresh, but a durable platform for SaskTel's consumer experience going forward.&lt;/p&gt;
+          &lt;div class="metrics"&gt;
+            &lt;div class="metric"&gt;
+              &lt;span class="metric-num"&gt;98&lt;span class="metric-unit"&gt;%&lt;/span&gt;&lt;/span&gt;
+              &lt;span class="metric-label"&gt;Task success rate during testing&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="metric"&gt;
+              &lt;span class="metric-num"&gt;134&lt;span class="metric-unit"&gt;%&lt;/span&gt;&lt;/span&gt;
+              &lt;span class="metric-label"&gt;Decrease in time to value&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class="case-next"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;a href="research.html"&gt;← Andgo User Research&lt;/a&gt;
+      &lt;a href="safespace.html"&gt;Google Design Sprint: Safespace →&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;footer id="contact"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="footer-bottom"&gt;
+        &lt;span&gt;&lt;a class="mail" href="mailto:brittanylloy@gmail.com"&gt;brittanylloy@gmail.com&lt;/a&gt; · 306.241.7533 · Saskatoon, SK&lt;/span&gt;
+        &lt;span&gt;RESUME &amp;amp; PORTFOLIO&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;script&gt;
+(function(){
+  document.querySelectorAll('[data-vp-screen]').forEach(function(screen){
+    var pages = screen.querySelectorAll('img');
+    if(!pages.length) return;
+    var i = 0;
+    pages[0].style.opacity = '1';
+    function run(){
+      var img = pages[i];
+      var travel = Math.max(0, img.offsetHeight - screen.clientHeight);
+      var dur = travel &lt; 60 ? 3000 : Math.min(14000, Math.max(5000, travel * 9));
+      if(travel &lt; 60){
+        img.style.transition = 'opacity 1.4s ease';
+      } else {
+        img.style.transition = 'transform ' + dur + 'ms linear, opacity 1.4s ease';
+        img.style.transform = 'translateY(-' + travel + 'px)';
+      }
+      setTimeout(function(){
+        img.style.opacity = '0';
+        var next = (i + 1) % pages.length;
+        pages[next].style.transition = 'opacity 1.4s ease';
+        pages[next].style.transform = 'translateY(0)';
+        pages[next].style.opacity = '1';
+        setTimeout(function(){ img.style.transition = 'none'; img.style.transform = 'translateY(0)'; }, 1400);
+        i = next;
+        setTimeout(run, 1600);
+      }, dur + 1400);
+    }
+    setTimeout(run, 1200);
+  });
+})();
+&lt;/script&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div><div class="pane" data-p="6"><div class="bar"><span>styles.css · 559 lines</span><button class="copy" data-i="6">Copy</button></div><pre id="c6">
+  :root{
+    --bg:#ffffff;
+    --ink:#111214;
+    --ink-soft:#6c6c6c;
+    --ink-faint:#a7a7a7;
+    --line:#e6e5e2;
+    --line-soft:#f1f0ee;
+    --sans:'sculpin', sans-serif;
+    --display:'sculpin', sans-serif;
+    --max:1240px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--ink); color:var(--bg);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 40px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+
+  /* ---------- nav ---------- */
+  header.top{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .top-inner{max-width:var(--max); margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  @media (max-width:640px){ .top-inner{padding:16px 22px;} }
+  .brand{
+    font-family:var(--display); font-weight:900; font-size:17px; text-decoration:none; letter-spacing:-.01em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand-mark{ width:30px; height:30px; display:block; flex:0 0 auto; }
+  .brand-mark path{ fill:#c9c8c4; }
+  .brand-name{
+    opacity:0; transform:translateX(-6px);
+    transition:opacity .3s ease, transform .3s ease;
+    white-space:nowrap;
+  }
+  header.top.scrolled .brand-name{ opacity:1; transform:translateX(0); }
+  nav.primary{display:flex; gap:30px; align-items:center;}
+  nav.primary a{
+    font-family:var(--sans); font-weight:500; font-size:12.5px;
+    text-decoration:none; color:var(--ink-soft);
+    letter-spacing:.06em; text-transform:uppercase;
+    padding-bottom:3px; border-bottom:1px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  nav.primary a:hover, nav.primary a.active{ color:var(--ink); border-color:var(--ink); }
+  nav.primary a.cta{
+    color:#fff; background:var(--ink); padding:9px 16px;
+    border-radius:2px; border-bottom:none;
+  }
+  nav.primary a.cta:hover{ background:#000; }
+  @media (max-width:600px){ nav.primary a:not(.cta){ display:none; } }
+
+  /* ---------- hero ---------- */
+  .hero{ position:relative; padding:172px 0 96px; overflow:hidden; min-height:640px; display:flex; align-items:center; }
+  .starburst{ position:absolute; top:96px; left:-60px; width:420px; height:420px; opacity:.55; pointer-events:none; }
+  @media (max-width:720px){ .starburst{ width:260px; height:260px; left:-90px; top:60px; } }
+  .hero-skills{
+    position:absolute; top:0; bottom:0; right:40px; z-index:1;
+    width:min(50vw, 520px); overflow:hidden; pointer-events:none;
+    display:flex; align-items:flex-start;
+    -webkit-mask-image:linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+    mask-image:linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  }
+  .hero-skills-track{
+    display:flex; flex-direction:column; gap:14px; width:100%;
+    animation:skills-scroll 46s linear infinite;
+  }
+  .hero-skills span{
+    font-family:var(--display); font-weight:900; letter-spacing:-.02em;
+    font-size:clamp(20px, 2.6vw, 42px); line-height:1.06;
+    color:#e3e2de; text-align:right; white-space:nowrap;
+    transition:color .55s ease;
+  }
+  .hero-skills span.lit{ color:#a5a4a0; }
+  @keyframes skills-scroll{ from{ transform:translateY(0); } to{ transform:translateY(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .hero-skills-track{ animation:none; } }
+  @media (max-width:900px){ .hero-skills{ display:none; } }
+  .hero-inner{ position:relative; z-index:2; width:100%; }
+  @media (min-width:901px){ .hero-inner{ padding-right:calc(min(50vw, 520px) + 48px); } }
+  .eyebrow{
+    font-family:var(--sans); font-weight:500; font-size:14px;
+    color:var(--ink-soft); margin-bottom:18px;
+  }
+  h1.display{
+    font-family:var(--display); font-weight:900; letter-spacing:-.02em;
+    font-size:clamp(52px, 9vw, 108px); line-height:.98; margin:0 0 48px;
+  }
+  .hero-contact{
+    font-family:var(--sans); font-size:14px; color:var(--ink-soft);
+  }
+  .hero-contact a{ text-decoration:none; }
+  .hero-contact a:hover{ color:var(--ink); }
+
+  /* ---------- section shell ---------- */
+  section{ position:relative; }
+  .rule-top{ border-top:1px solid var(--line); }
+  .section-pad{ padding:88px 0; }
+  @media (max-width:640px){ .section-pad{ padding:64px 0; } }
+
+  .kicker{
+    font-family:var(--sans); font-weight:500; font-size:13px;
+    color:var(--ink-soft); margin-bottom:14px;
+  }
+  h2.section-title{
+    font-family:var(--display); font-weight:700; letter-spacing:-.015em;
+    font-size:clamp(30px, 4.4vw, 46px); margin:0 0 40px;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1fr; gap:48px; }
+  @media (min-width:900px){ .about-grid{ grid-template-columns:1.3fr .85fr .85fr; gap:56px; } }
+  .about-bio p{ font-size:16px; line-height:1.75; color:var(--ink-soft); margin:0 0 20px; max-width:52ch; }
+  .col-label{
+    font-family:var(--sans); font-weight:700; font-size:12.5px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--ink);
+    margin:0 0 22px; padding-bottom:14px; border-bottom:1px solid var(--line);
+  }
+  .col-label[aria-hidden="true"]{ border-bottom:0; padding-bottom:0; margin:0; }
+  .dash-row{
+    display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px;
+    width:100vw; margin:0 0 52px calc(50% - 50vw); padding:0 max(24px, calc(50vw - 620px)) 14px;
+  }
+  .dash-row img{
+    display:block; width:100%; height:auto;
+    border:1px solid var(--line); background:#fff;
+  }
+  .dash-shot{ position:relative; }
+
+  /* ---------- device viewports ---------- */
+  .desk-frame{ border:1px solid var(--line); background:#fff; overflow:hidden; margin-bottom:52px; }
+  .desk-screen{ aspect-ratio:16 / 10; background:var(--line-soft); }
+  .viewport-row{ display:grid; grid-template-columns:1fr; gap:24px; padding-bottom:52px; }
+  @media (min-width:900px){ .viewport-row{ grid-template-columns:minmax(0,2.6fr) minmax(0,1fr); align-items:start; } }
+  .vp{ background:#fff; border:1px solid var(--line); overflow:hidden; }
+  .vp-chrome{
+    display:flex; align-items:center; gap:7px; height:30px; padding:0 12px;
+    background:var(--line-soft); border-bottom:1px solid var(--line);
+  }
+  .vp-chrome span{ width:9px; height:9px; border-radius:50%; background:#d5d3cf; }
+  .vp-desktop .vp-screen{ position:relative; aspect-ratio:16 / 10; overflow:hidden; background:#fff; }
+  .vp-desktop .vp-screen img{
+    position:absolute; top:0; left:0; width:100%; height:auto; display:block;
+    opacity:0; transition:opacity 1.4s ease; will-change:transform;
+  }
+  .vp-desktop .vp-screen img:first-child{ opacity:1; }
+  .vp-fit{ margin-bottom:0; }
+  .vp-fit .vp-screen{ aspect-ratio:1441 / 991; }
+  .vp-mobile{ border-radius:26px; padding:10px; background:#1b1c1e; border-color:#1b1c1e; max-width:320px; }
+  .vp-notch{ width:74px; height:5px; border-radius:99px; background:#3a3b3e; margin:2px auto 8px; }
+  .vp-mobile .vp-screen{ position:relative; aspect-ratio:9 / 19.5; border-radius:18px; overflow:hidden; background:#fff; }
+  .vp-mobile .vp-screen img{
+    position:absolute; top:0; left:0; width:100%; height:auto; display:block;
+    opacity:0; transition:opacity 1.4s ease; will-change:transform;
+  }
+  .vp-mobile .vp-screen img:first-child{ opacity:1; }
+  .vp-screen-empty{ display:flex; align-items:center; justify-content:center; background:var(--line-soft); }
+  .vp-screen-empty span{
+    font-family:var(--sans); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-faint); text-align:center; padding:0 18px;
+  }  .dash-shot img.alt{
+    position:absolute; inset:0; height:100%; object-fit:cover; object-position:top center;
+    opacity:0; transition:opacity 1.6s ease;
+  }
+  .entry{ margin-bottom:26px; }
+  .entry .role{ font-weight:700; font-size:14.5px; color:var(--ink); }
+  .entry .when{ font-family:var(--sans); font-size:12.5px; color:var(--ink-faint); margin-left:4px; }
+  .entry .org{ display:block; font-size:13px; color:var(--ink-soft); margin-top:2px; }
+  .entry p{ font-size:13.5px; line-height:1.65; color:var(--ink-soft); margin:8px 0 0; }
+
+  /* ---------- work index ---------- */
+  .index-list{ border-top:1px solid var(--line); }
+  .index-row{
+    display:grid; grid-template-columns:1fr auto auto; align-items:center;
+    gap:20px; padding:28px 4px; border-bottom:1px solid var(--line);
+    text-decoration:none; color:var(--ink);
+    transition:padding-left .2s ease, background .2s ease;
+  }
+  .index-row:hover{ padding-left:12px; background:var(--line-soft); }
+  .index-title{ font-family:var(--display); font-weight:500; font-size:clamp(19px,2.4vw,27px); letter-spacing:-.01em; }
+  .index-title small{ display:block; font-family:var(--sans); font-weight:400; font-size:13.5px; color:var(--ink-soft); margin-top:5px; }
+  .index-tags{ display:none; font-family:var(--sans); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); text-align:right; max-width:220px; }
+  @media (min-width:800px){ .index-tags{ display:block; } }
+  .index-arrow{ font-family:var(--sans); font-weight:700; font-size:13px; color:var(--ink); white-space:nowrap; transform:translateX(0); transition:transform .2s ease; }
+  .index-row:hover .index-arrow{ transform:translateX(4px); }
+
+  /* ---------- case studies ---------- */
+  .case{ padding:96px 0; border-top:1px solid var(--line); }
+  .case-head{ margin-bottom:44px; max-width:760px; }
+  .case-role{ font-weight:500; font-size:14px; color:var(--ink-soft); margin-bottom:10px; }
+  .case h3{
+    font-family:var(--display); font-weight:900; letter-spacing:-.015em;
+    font-size:clamp(28px, 4.6vw, 46px); margin:0;
+  }
+  .case-body-grid{ display:grid; grid-template-columns:1fr; gap:40px; }
+  @media (min-width:900px){ .case-body-grid{ grid-template-columns:.86fr 1.5fr; gap:56px; } }
+  .case-text p{ font-size:15.5px; line-height:1.75; color:var(--ink-soft); margin:0 0 18px; }
+  .case-tags{
+    display:flex; flex-wrap:wrap; gap:8px 10px; margin-bottom:22px;
+  }
+  .case-tags span{
+    font-family:var(--sans); font-weight:500; font-size:10.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .case-tags span:not(:last-child)::after{ content:"·"; margin-left:10px; color:var(--ink-faint); }
+  .case-link{ display:inline-block; margin-top:4px; font-size:14px; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+  .case-visual{
+    border:1px solid var(--line); background:var(--line-soft);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .case-visual img{ width:100%; height:auto; display:block; }
+  .case-visual:has(video){ aspect-ratio:1200 / 750; position:relative; display:block; border-radius:16px; overflow:hidden; }
+  .case-visual video{ display:block; position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .case-visual:has(video[src$="andgo-dashboard-v2.mp4"]){ aspect-ratio:978 / 678; }
+  .case-visual video[src$="andgo-dashboard-v2.mp4"]{
+    inset:auto; width:calc(1200 / 978 * 100%); height:auto; object-fit:fill;
+    left:calc(-111 / 978 * 100%); top:calc(-36 / 678 * 100%);
+  }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ---------- screen row ---------- */
+  .screen-row{
+    margin:8px 0 56px; overflow:hidden;
+    width:100vw; margin-left:calc(50% - 50vw);
+  }
+  .screen-track{
+    display:flex; gap:clamp(12px, 2vw, 28px); width:max-content;
+    animation:screen-scroll 126s linear infinite;
+  }
+  .screen-row:hover .screen-track{ animation-play-state:paused; }
+  .screen-track img{
+    flex:0 0 auto; height:clamp(380px, 52vw, 620px); width:auto;
+    display:block; border-radius:6px;
+  }
+  @keyframes screen-scroll{ to{ transform:translateX(calc(-50% - clamp(6px, 1vw, 14px))); } }
+  .photo-row{
+    display:flex; gap:clamp(12px, 2vw, 28px); margin:8px 0 56px;
+    overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:14px;
+  }
+  @media (min-width:900px){
+    .photo-row{ width:calc((100% - 56px) * (1.4 / 1.9)); margin-left:auto; }
+  }
+  .photo-row img{
+    flex:0 0 auto; height:clamp(380px, 52vw, 620px); width:auto;
+    display:block; border-radius:6px;
+  }
+
+  /* ---------- logo build sequence ---------- */
+  .build-row{
+    display:flex; align-items:center; justify-content:flex-start;
+    gap:clamp(16px, 3vw, 48px); margin:clamp(24px, 3vw, 44px) 0 clamp(32px, 4vw, 62px);
+    flex-wrap:nowrap;
+  }
+  @media (min-width:900px){
+    .build-row{ width:calc((100% - 56px) * (1.4 / 1.9)); margin-left:auto; }
+  }
+  .build-divider{ align-self:stretch; width:1px; background:rgba(13,14,16,.16); flex:0 0 1px; }
+  .build-mask{ overflow:hidden; width:min(280px, 36%); }
+  .build-row img{ width:100%; height:auto; display:block; }
+  .build-col{
+    display:flex; flex-direction:column; align-items:center;
+    gap:clamp(8px, 1.5vw, 20px); width:min(320px, 42%);
+  }
+  .build-row .build-3{ width:100%; }
+  .build-row .build-1{ position:relative; z-index:3; }
+  .build-row .build-2{
+    position:relative; z-index:2; opacity:0;
+    transform:translateY(calc(-100% - clamp(8px, 1.5vw, 20px)));
+    transition:transform .8s cubic-bezier(.22,.8,.3,1) .15s, opacity .4s ease .15s;
+  }
+  .build-row .build-3{
+    position:relative; z-index:1; opacity:0;
+    transform:translateX(calc(-100% - clamp(16px, 3vw, 48px)));
+    transition:transform .8s cubic-bezier(.22,.8,.3,1) .85s, opacity .4s ease .85s;
+  }
+  .build-row.in .build-2, .build-row.in .build-3{ opacity:1; transform:translate(0,0); }
+  @media (prefers-reduced-motion: reduce){
+    .build-row .build-2, .build-row .build-3{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- photo parallax band ---------- */
+  .photo-band{
+    position:relative; width:100vw; margin-left:calc(50% - 50vw);
+    height:clamp(260px, 34vw, 440px); overflow:hidden;
+    margin-top:clamp(24px, 3vw, 44px); margin-bottom:clamp(32px, 4vw, 62px);
+  }
+  .photo-band-bg{
+    position:absolute; inset:-32% 0;
+    background-size:cover; background-position:center 78%;
+    filter:grayscale(1);
+    will-change:transform;
+  }
+  .photo-band.full-colour .photo-band-bg{ filter:none; }
+
+  /* ---------- image pair ---------- */
+  .pair-row{
+    display:grid; grid-template-columns:1fr; gap:clamp(12px, 2vw, 28px);
+    align-items:stretch;
+  }
+  @media (min-width:760px){ .pair-row{ grid-template-columns:1.35fr .65fr; } }
+  @media (min-width:900px){
+    .pair-row{ width:calc((100% - 56px) * (1.4 / 1.9)); margin-left:auto; }
+  }
+  .pair-row img{
+    width:100%; height:auto; min-width:0; display:block; border-radius:6px;
+  }
+  @media (min-width:760px){
+    .pair-row img{ height:100%; object-fit:cover; }
+  }
+
+  /* ---------- parallax band ---------- */
+  .parallax-band{
+    position:relative; width:100vw; margin-left:calc(50% - 50vw);
+    height:300px; margin-top:clamp(32px, 4vw, 62px); margin-bottom:clamp(32px, 4vw, 62px);
+    overflow:hidden;
+  }
+  .parallax-bg{
+    position:absolute; inset:-25% 0; background:#e3e5ee;
+    background-image:url("work/ld-banner-bg-v2.png");
+    background-size:1200px auto; background-repeat:repeat;
+    will-change:transform;
+  }
+  .parallax-logo{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:min(900px, 82%); height:auto; display:block;
+  }
+
+  /* ---------- side-by-side bands ---------- */
+  .band-pair{
+    display:grid; grid-template-columns:1fr; gap:clamp(12px, 2vw, 28px);
+    margin-top:clamp(24px, 3vw, 44px); margin-bottom:clamp(32px, 4vw, 62px);
+  }
+  @media (min-width:820px){ .band-pair{ grid-template-columns:1fr 1fr; } }
+  .band-pair &gt; .photo-band,
+  .band-pair &gt; .parallax-band{
+    width:auto; margin:0; height:clamp(240px, 26vw, 380px);
+  }
+  .band-pair .parallax-logo{ width:min(840px, 160%); }
+
+  /* ---------- case hero band ---------- */  .case-hero-band{
+    position:relative; width:100%; background:#52597A;
+    height:300px; margin:clamp(32px, 4vw, 62px) 0;
+  }
+  .case-hero-band img{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:2000px; max-width:100%; height:auto; display:block;
+  }
+
+  /* ---------- brand marquee ---------- */
+  .brand-rule{ width:100%; height:1px; background:rgba(13,14,16,.14); margin-top:72px; }
+  .brands{ padding-top:48px; }
+  .brand-marquee{ overflow:hidden; margin-top:20px; width:100%; }
+  .brand-track{
+    display:flex; gap:20px; width:max-content;
+    animation:brand-scroll 105s linear infinite;
+  }
+  .brand-marquee:hover .brand-track{ animation-play-state:paused; }
+  .brand-track img{ height:300px; width:auto; display:block; border-radius:4px; filter:grayscale(1); transition:filter .35s ease; }
+  .brand-track img:hover{ filter:grayscale(0); }
+  @keyframes brand-scroll{ to{ transform:translateX(calc(-50% - 10px)); } }
+  @media (max-width:700px){ .brand-track img{ height:170px; } }
+
+  /* ---------- footer ---------- */
+  footer{ background:#0d0e10; color:#ffffff; padding:72px 0; }
+  footer .kicker{ color:#ffffff; }
+  .footer-top h2{
+    font-family:var(--display); font-weight:900; letter-spacing:-.02em;
+    font-size:clamp(34px, 6.4vw, 74px); margin:0 0 10px; color:#ffffff;
+  }
+  .footer-top a.mail{ text-decoration:none; border-bottom:2px solid transparent; transition:border-color .15s ease; }
+  .footer-top a.mail:hover{ border-color:#ffffff; }
+  .footer-meta{ font-family:var(--sans); font-size:14px; color:#ffffff; margin-top:28px; }
+  .footer-bottom{
+    margin-top:0; padding-top:0; border-top:0;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-family:var(--sans); font-size:11.5px; color:#ffffff;
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+  footer ::selection{ background:#ffffff; color:#0d0e10; }
+
+  /* ---------- persona explorer ---------- */
+  .persona-explorer{ padding:0; }
+  .section-pad:has(+ .persona-explorer){ padding-bottom:52px; }
+  .persona-explorer + .section-pad{ padding-top:52px; }
+  .persona-explorer .case-copy-grid{ padding-bottom:52px; }
+  .persona-explorer .case-copy-grid:last-of-type{ padding-bottom:0; }
+  .persona-explorer .col-label[aria-hidden]{ border-bottom:0; padding-bottom:0; margin:0; }  .persona-explorer-grid{ display:grid; grid-template-columns:1fr; gap:28px; }
+  @media (min-width:900px){
+    .persona-explorer-grid{ grid-template-columns:minmax(0,.738fr) minmax(0,1.262fr); gap:20px; align-items:start; }
+    .persona-picks{ gap:12px; }
+  }
+  .persona-picks{ display:grid; grid-template-columns:1fr; gap:12px; }
+  .persona-pick{
+    appearance:none; padding:0; cursor:pointer; display:block; width:100%;
+    border:0; background:#fff; overflow:hidden;
+    opacity:.55; transition:opacity .25s ease, transform .25s ease;
+  }
+  .persona-pick img{ display:block; width:100%; height:auto; }
+  .persona-pick:hover{ opacity:.85; }
+  .persona-pick.active{ opacity:1; }
+  .persona-view{ position:sticky; top:96px; display:block; text-decoration:none; }
+  .persona-view img{
+    display:block; width:100%; height:auto;
+    border:1px solid var(--line); background:#fff;
+  }
+  .persona-view span{
+    display:block; font-family:var(--sans); font-size:11.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--ink-faint); margin-top:12px;
+  }
+  .persona-view:hover span{ color:var(--ink); }
+  @media (max-width:899px){ .persona-view{ position:static; } }
+
+  /* ---------- work cards ---------- */
+  .work-grid{ display:grid; grid-template-columns:1fr; gap:84px 44px; }
+  @media (min-width:820px){ .work-grid{ grid-template-columns:1fr 1fr; } .work-card.featured{ grid-column:1 / -1; } }
+  .work-card{ display:block; text-decoration:none; color:inherit; }
+  .work-thumb{
+    border:1px solid var(--line); background:var(--line-soft); overflow:hidden;
+    aspect-ratio:16 / 10; position:relative;
+  }
+  .work-card.featured .work-thumb{ aspect-ratio:24 / 8; }
+  .work-thumb img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .work-card:hover .work-thumb img{ transform:scale(1.035); }
+  .work-thumb.thumb-contain{ background:#fff; }
+  .work-thumb.thumb-contain img{ object-fit:contain; }
+  .work-thumb video{
+    position:absolute; width:calc(1200 / 1006 * 100%); height:auto;
+    left:calc(-96 / 1006 * 100%); top:50%; display:block; transform:translateY(-50%);
+    transition:transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .work-card:hover .work-thumb video{ transform:translateY(-50%) scale(1.035); }
+  .work-meta{ display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-top:18px; }
+  .work-title{ font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:clamp(20px,2.1vw,26px); }
+  .work-title small{ display:block; font-family:var(--sans); font-weight:400; font-size:13.5px; color:var(--ink-soft); margin-top:6px; }
+  .work-view{ font-family:var(--sans); font-weight:700; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; transition:transform .2s ease; }
+  .work-card:hover .work-view{ transform:translateX(4px); }
+  .work-tags{ font-family:var(--sans); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-top:10px; }
+
+  .work-thumb.placeholder, .case-visual.placeholder{
+    display:flex; align-items:center; justify-content:center;
+    background:repeating-linear-gradient(135deg, #f6f5f3 0 12px, #f1f0ee 12px 24px);
+    min-height:200px;
+  }
+  .work-thumb.placeholder span, .case-visual.placeholder span{
+    font-family:var(--sans); font-weight:500; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-faint);
+  }
+  .case-visual.placeholder{ aspect-ratio:16 / 9; }
+  .case-text p.draft{ color:var(--ink-faint); font-style:italic; }
+
+  /* ---------- figures ---------- */
+  .fig{ margin:0; }
+  .fig img{ width:100%; height:100%; object-fit:cover; display:block; border:1px solid var(--line); background:var(--line-soft); }
+  .fig figcaption{
+    margin-top:12px; font-family:var(--sans); font-size:11.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--ink-faint);
+  }
+  .fig-grid{ display:grid; grid-template-columns:1fr; gap:34px; padding-bottom:52px; }
+  @media (min-width:820px){
+    .fig-grid.two{ grid-template-columns:1fr 1fr; }
+    .fig-grid.split{ grid-template-columns:1.55fr 1fr; align-items:start; }
+  }
+  .fig.tall img{ aspect-ratio:3 / 4; }
+  .fig-grid.two img{ aspect-ratio:4 / 3; object-fit:contain; }
+
+  .fig-scroll{
+    width:100vw; margin-left:calc(50% - 50vw); padding:0 0 52px;
+    overflow:hidden;
+  }
+  .fig-scroll-track{ display:flex; gap:26px; width:max-content; animation:fig-marquee 60s linear infinite; }
+  .fig-scroll:hover .fig-scroll-track{ animation-play-state:paused; }
+  @keyframes fig-marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){
+    .fig-scroll{ overflow-x:auto; }
+    .fig-scroll-track{ animation:none; }
+  }
+  .fig-scroll .fig{ flex:0 0 min(74vw, 620px); }
+  .fig-scroll .fig img, .fig-scroll .fig .fig-placeholder{ aspect-ratio:4 / 3; width:100%; }
+  .fig-scroll .fig img{ object-fit:contain; }
+  .fig-placeholder{
+    border:1px solid var(--line);
+    background:repeating-linear-gradient(135deg, #f6f5f3 0 12px, #f1f0ee 12px 24px);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .fig-placeholder span{
+    font-family:var(--sans); font-weight:500; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-faint);
+  }
+
+  .swatches{ display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-bottom:52px; }
+  .fig-grid .fig img[src$=".svg"]{ object-fit:contain; padding:34px; background:var(--bg); }
+  .swatch{
+    min-height:150px; padding:22px 24px; color:#fff;
+    display:flex; flex-direction:column; justify-content:flex-end; gap:4px;
+    font-family:var(--sans); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  }
+  .swatch span:first-child{ font-weight:700; }
+
+  /* ---------- metrics ---------- */
+  .metrics{ display:grid; grid-template-columns:1fr; gap:1px; margin-top:34px; background:var(--line); border:1px solid var(--line); }
+  @media (min-width:600px){ .metrics{ grid-template-columns:1fr 1fr; } }
+  .metric{ background:var(--bg); padding:34px 30px; }
+  .metric-num{
+    display:block; font-family:var(--display); font-weight:900; letter-spacing:-.03em;
+    font-size:clamp(46px, 6vw, 76px); line-height:1; color:var(--ink);
+  }
+  .metric-unit{ font-size:.42em; letter-spacing:0; color:var(--ink-faint); margin-left:2px; }
+  .metric-label{
+    display:block; margin-top:14px; font-family:var(--sans); font-weight:500;
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);
+  }
+
+  /* ---------- case study page ---------- */
+  .case-hero{ padding:150px 0 42px; }
+  .back{ display:inline-block; font-family:var(--sans); font-weight:500; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; margin-bottom:34px; }
+  .back:hover{ color:var(--ink); }
+  h1.case-h1{ font-family:var(--display); font-weight:900; letter-spacing:-.02em; font-size:clamp(34px,6vw,72px); line-height:1.02; margin:0 0 22px; max-width:20ch; }
+  .case-hero .case-role{
+    display:flex; width:max-content; align-items:center; gap:10px;
+    font-family:var(--sans); font-weight:700; font-size:clamp(11px,1vw,13px);
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft);
+    margin:28px 0 20px; padding:5px 9px; border:0;
+    background:var(--line-soft);
+  }
+
+  .case-figure{ padding:0 0 12px; }
+  .case-copy-grid{ display:grid; grid-template-columns:1fr; gap:32px; }
+  @media (min-width:900px){ .case-copy-grid{ grid-template-columns:.5fr 1.4fr; gap:56px; } }
+  .case-copy-grid{ padding-bottom:52px; }
+  .case-copy-grid:last-of-type{ padding-bottom:0; }
+  @media (min-width:900px){ .case-copy-grid .col-label{ position:sticky; top:96px; align-self:start; } }
+  .case-copy-grid .case-text p{ font-size:16.5px; line-height:1.8; max-width:62ch; }
+  .case-text h3{
+    font-family:var(--display); font-weight:700; letter-spacing:-.01em;
+    font-size:20px; margin:30px 0 12px;
+  }
+  .case-next{ border-top:1px solid var(--line); padding:34px 0; }
+  .case-next .wrap{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .case-next a{ font-family:var(--sans); font-weight:700; font-size:13px; text-decoration:none; color:var(--ink-soft); }
+  .case-next a:hover{ color:var(--ink); }
+</pre></div><div class="pane" data-p="7"><div class="bar"><span>app.js · 74 lines</span><button class="copy" data-i="7">Copy</button></div><pre id="c7">(function(){
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { items.forEach(function(el){ el.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  items.forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  var box = document.querySelector('.hero-skills');
+  var spans = box ? Array.prototype.slice.call(box.querySelectorAll('.hero-skills-track span')) : [];
+  if (!spans.length) return;
+  if (window.matchMedia &amp;&amp; window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lit = null;
+  function visible(){
+    var b = box.getBoundingClientRect();
+    // keep to the un-faded middle of the masked column
+    var top = b.top + b.height * 0.25, bottom = b.bottom - b.height * 0.25;
+    return spans.filter(function(s){
+      var r = s.getBoundingClientRect();
+      return r.top &gt;= top &amp;&amp; r.bottom &lt;= bottom;
+    });
+  }
+  function tick(){
+    if (lit) lit.classList.remove('lit');
+    var pool = visible();
+    if (pool.length) {
+      lit = pool[Math.floor(Math.random() * pool.length)];
+      lit.classList.add('lit');
+    } else {
+      lit = null;
+    }
+    setTimeout(tick, 1100 + Math.random() * 1600);
+  }
+  setTimeout(tick, 800);
+})();
+
+(function(){
+  var bands = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  if (!bands.length) return;
+  if (window.matchMedia &amp;&amp; window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var raf = null;
+  function update(){
+    raf = null;
+    bands.forEach(function(band){
+      var bg = band.querySelector('.parallax-bg, .photo-band-bg');
+      if (!bg) return;
+      var r = band.getBoundingClientRect();
+      var mid = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+      var amp = band.classList.contains('photo-band') ? 190 : 90;
+      bg.style.transform = 'translateY(' + (mid * amp).toFixed(1) + 'px)';
+    });
+  }
+  function onScroll(){ if (!raf) raf = requestAnimationFrame(update); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+
+(function(){
+  // duplicate marquee items so the loop is seamless
+  document.querySelectorAll('.fig-scroll-track').forEach(function(track){
+    var items = Array.prototype.slice.call(track.children);
+    items.forEach(function(el){
+      var c = el.cloneNode(true);
+      c.setAttribute('aria-hidden', 'true');
+      track.appendChild(c);
+    });
+  });
+})();
+</pre></div>
+<script>
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+ document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+ document.querySelectorAll('.pane').forEach(function(x){x.classList.remove('on')});
+ t.classList.add('on');
+ document.querySelector('.pane[data-p="'+t.dataset.t+'"]').classList.add('on');
+ window.scrollTo(0,0);
+})});
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+ navigator.clipboard.writeText(document.getElementById('c'+b.dataset.i).textContent);
+ b.textContent='Copied'; setTimeout(function(){b.textContent='Copy'},1200);
+})});
+</script>
+</body></html>
