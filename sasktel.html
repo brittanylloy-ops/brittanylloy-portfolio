@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mySASKTEL Consumer Evolution — Brittany Lloy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/pzv7vtz.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top scrolled">
+  <div class="top-inner">
+    <a class="brand" href="index.html#top"><svg class="brand-mark" viewBox="0 0 309.5 295.45" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M207.04,295.45h-104.59l35.2-118.39-85.36,89.44L0,176.67l119.69-28.94L0,118.79,52.29,28.94l.46.48,84.03,87.22L102.46,0h104.58l-.19.64-34.14,116,84.49-87.7,52.29,89.84-119.69,28.94,119.69,28.94-52.3,89.85-.46-.48-84.9-88.96,35.2,118.39h0Z"/></svg><span class="brand-name">Brittany Lloy</span></a>
+    <nav class="primary">
+      <a href="index.html#work" class="active">Work</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="case-hero">
+    <div class="wrap">
+      <a class="back" href="index.html#work">← All work</a>
+      <div class="case-role">Lead Designer</div>
+      <h1 class="case-h1">mySASKTEL Consumer Evolution</h1>
+      <div class="case-tags"><span>Prototyping</span><span>Interaction design</span><span>UX/UI design</span><span>User testing</span></div>
+    </div>
+  </section>
+
+  <section class="case-figure">
+    <div class="wrap">
+      <div class="case-visual reveal in">
+        <video src="work/andgo-databyday.mp4" autoplay loop muted playsinline aria-label="mySASKTEL Consumer Evolution — project visual"></video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="case-copy-grid reveal">
+        <div class="col-label">Overview</div>
+        <div class="case-text">
+          <p>SaskTel is the leading Information and Communications Technology provider in Saskatchewan, with almost $1.4 billion in annual revenue and over 1.3 million customer connections. When they approached us to reimagine mySASKTEL, their consumer portal, the stakes were high: the existing experience was falling short both visually and structurally, and a growing list of business requirements, new functionality, alignment with a brand-new consumer design system, and a clean split between the consumer and business portals — meant this wasn't a redesign so much as a rebuild of the entire consumer experience across web.</p>
+        </div>
+      </div>
+
+      <div class="case-copy-grid reveal">
+        <div class="col-label">Process</div>
+        <div class="case-text">
+          <p>Over several months embedded full-time with SaskTel's internal team, we ran a research-driven design process with multiple rounds of user interviews and usability testing shaped every decision, from information architecture down to interaction details. The result was an intuitive, accessible, and visually refined system built to scale, one that unified the experience across platforms while giving SaskTel the flexibility to grow the portal independently from its business-facing counterpart.</p>
+        </div>
+      </div>
+
+      <div class="case-copy-grid reveal">
+        <div class="col-label" aria-hidden="true"></div>
+        <div class="desk-frame vp-desktop vp-fit">
+        <div class="vp-chrome"><span></span><span></span><span></span></div>
+        <div class="vp-screen" data-vp-screen>
+          <img src="uploads/Artboard%201.png" alt="mySASKTEL loading screen">
+          <img src="uploads/Artboard%202-6f15b98b.png" alt="mySASKTEL account landing page">
+          <img src="uploads/Artboard%204-6076ea7c.png" alt="Device and plan details">
+          <img src="uploads/Artboard%205-3fd6b175.png" alt="Data usage notifications and billing">
+          <img src="uploads/Artboard%206.png" alt="Data limit by device">
+        </div>
+        </div>
+      </div>
+
+      <div class="case-copy-grid reveal">
+        <div class="col-label">Outcome</div>
+        <div class="case-text">
+          <p>The redesign landed strongly in beta, earning enthusiastic feedback from users and validating the new direction end to end. It's since become the foundation for an ongoing roadmap of updates heading toward full launch, proof that the new system isn't just a visual refresh, but a durable platform for SaskTel's consumer experience going forward.</p>
+          <div class="metrics">
+            <div class="metric">
+              <span class="metric-num">98<span class="metric-unit">%</span></span>
+              <span class="metric-label">Task success rate during testing</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num">134<span class="metric-unit">%</span></span>
+              <span class="metric-label">Decrease in time to value</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="case-next">
+    <div class="wrap">
+      <a href="research.html">← Andgo User Research</a>
+      <a href="safespace.html">Google Design Sprint: Safespace →</a>
+    </div>
+  </nav>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span><a class="mail" href="mailto:brittanylloy@gmail.com">brittanylloy@gmail.com</a> · 306.241.7533 · Saskatoon, SK</span>
+        <span>RESUME &amp; PORTFOLIO</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-vp-screen]').forEach(function(screen){
+    var pages = screen.querySelectorAll('img');
+    if(!pages.length) return;
+    var i = 0;
+    pages[0].style.opacity = '1';
+    function run(){
+      var img = pages[i];
+      var travel = Math.max(0, img.offsetHeight - screen.clientHeight);
+      var dur = travel < 60 ? 3000 : Math.min(14000, Math.max(5000, travel * 9));
+      if(travel < 60){
+        img.style.transition = 'opacity 1.4s ease';
+      } else {
+        img.style.transition = 'transform ' + dur + 'ms linear, opacity 1.4s ease';
+        img.style.transform = 'translateY(-' + travel + 'px)';
+      }
+      setTimeout(function(){
+        img.style.opacity = '0';
+        var next = (i + 1) % pages.length;
+        pages[next].style.transition = 'opacity 1.4s ease';
+        pages[next].style.transform = 'translateY(0)';
+        pages[next].style.opacity = '1';
+        setTimeout(function(){ img.style.transition = 'none'; img.style.transform = 'translateY(0)'; }, 1400);
+        i = next;
+        setTimeout(run, 1600);
+      }, dur + 1400);
+    }
+    setTimeout(run, 1200);
+  });
+})();
+</script>
+<script src="app.js"></script>
+</body>
+</html>
